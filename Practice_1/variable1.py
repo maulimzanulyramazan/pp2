@@ -1,4 +1,3 @@
 x = 10
 y = "Ramazan"
-print(type(x))
-print(type(y))
+print(f"{y} has {x} books")

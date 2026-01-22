@@ -1,2 +1,2 @@
-if(10 > 8):
-    print("10 greater than 8")
+name = input()
+print(f"My name is {name}")

@@ -1,3 +1,7 @@
-a = int(input())
+a = input()
+c = ""
 b = int(input())
-print(a ** b)
+while(b > 0):
+    c = c + a
+    b = b - 1
+print(c)

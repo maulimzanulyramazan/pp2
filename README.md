@@ -1,9 +1,8 @@
-# Practice-03: Functions, Lambda, Classes, Inheritance
+ Practice 4 — Python Basics (Dates, Generators, JSON, Math)
 
-This practice contains small, working Python examples covering:
-- **Functions**: basic functions, arguments, return values, `*args` and `**kwargs`
-- **Lambda**: lambda basics, `map()`, `filter()`, `sorted()`
-- **Classes**: class definition, `__init__`, class methods, class variables
-- **Inheritance**: inheritance basics, `super()`, method overriding, multiple inheritance
+This practice folder contains simple Python examples for learning and practicing core Python modules and concepts:
 
-## Project Structure
+- `dates.py` — working with date and time (`datetime`, `timedelta`)
+- `generators.py` — using generators with `yield`
+- `json.py` — converting Python objects to/from JSON
+- `math.py` — using the `math` module for calculations

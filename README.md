@@ -1,8 +1,21 @@
- Practice 4 — Python Basics (Dates, Generators, JSON, Math)
+# Practice 05 — Receipt Parsing
 
-This practice folder contains simple Python examples for learning and practicing core Python modules and concepts:
+## Goal
+Practice using **regular expressions (regex)** to extract key information from a receipt text and output it in a structured format.
 
-- `dates.py` — working with date and time (`datetime`, `timedelta`)
-- `generators.py` — using generators with `yield`
-- `json.py` — converting Python objects to/from JSON
-- `math.py` — using the `math` module for calculations
+## Files
+- `raw.txt` — input receipt text
+- `receipt_parser.py` — parser implementation
+- `README.md` — instructions
+
+## Tasks
+- Extract all prices
+- Find product names
+- Calculate total amount
+- Extract date and time
+- Detect payment method
+- Output results as JSON or formatted text
+
+## Run
+```bash
+python receipt_parser.py

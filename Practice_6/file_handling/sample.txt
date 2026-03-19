@@ -1,0 +1,4 @@
+Hello
+This is sample data
+Python file handling practice
+New appended line

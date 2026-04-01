@@ -1,54 +1,142 @@
-📌 Description
+# 📱 PhoneBook Application (PostgreSQL + Python)
 
-This project is a simple PhoneBook application built with Python and PostgreSQL.
-It allows users to store, manage, and search contacts in a database.
+## 📌 Description
 
-⚙️ Features
-Create a contacts table in PostgreSQL
-Insert contacts from a CSV file
-Add new contacts from console input
-Update contact name or phone number
-Search contacts:
-by name (case-insensitive)
-by phone prefix
-Delete contacts:
-by name
-by phone number
-🛠️ Technologies Used
-Python
-PostgreSQL
-psycopg2
-CSV module
-📂 Project Structure
-Practice7/
-│── phonebook.py
-│── connect.py
-│── config.py
-│── contacts.csv
-🚀 How to Run
-Install dependencies:
-pip install psycopg2-binary
-Configure database connection in config.py:
-host = "localhost"
-database = "your_database"
-user = "postgres"
-password = "your_password"
-port = "your_port"
-Run the program:
-python phonebook.py
-📄 CSV Format
+This project is a simple PhoneBook application using **Python** and **PostgreSQL**.
+It allows the user to store and manage contacts in a database.
 
-Example contacts.csv:
+The program uses:
 
-name,phone
-Roma,87771234567
-Timur,87011234567
-Aruzhan,87471234567
-💡 Notes
-Phone numbers must be unique (UNIQUE constraint)
-Phone numbers are stored as BIGINT
-The program uses parameterized queries to prevent SQL injection
-📌 Conclusion
+* Python → user interface
+* PostgreSQL → data storage and logic
+* Functions and Procedures → advanced database operations
 
-This project demonstrates basic CRUD operations (Create, Read, Update, Delete) with PostgreSQL using Python.
-It is a simple but practical example of working with databases.
+---
+
+## ⚙️ Features
+
+The application supports:
+
+1. Create contacts table
+2. Search contacts by name or phone (pattern search)
+3. Insert or update one user
+4. Insert multiple users (with validation)
+5. Show contacts with pagination (LIMIT & OFFSET)
+6. Delete contact by name or phone
+7. Show all contacts
+
+---
+
+## 🗄️ Database Structure
+
+Table: `contacts`
+
+* `id` – unique identifier (SERIAL PRIMARY KEY)
+* `name` – contact name (VARCHAR)
+* `phone` – phone number (VARCHAR)
+
+---
+
+## 🧠 Functions
+
+### 1. search_contacts(pattern_text)
+
+Searches contacts using part of name or phone.
+
+Uses:
+
+* `ILIKE` for case-insensitive search
+* `%pattern%` for partial matching
+
+---
+
+### 2. get_contacts_paginated(limit, offset)
+
+Returns contacts in parts using:
+
+* `LIMIT` → number of rows
+* `OFFSET` → starting position
+
+---
+
+## ⚡ Procedures
+
+### 1. insert_or_update_user(name, phone)
+
+* Inserts new contact
+* Updates phone if contact already exists
+
+---
+
+### 2. insert_many_users(names[], phones[])
+
+* Inserts multiple users
+* Uses loop and validation
+* Skips incorrect phone numbers
+
+---
+
+### 3. delete_contact(value)
+
+Deletes contact by:
+
+* name
+  or
+* phone
+
+---
+
+## 🔄 How It Works
+
+1. User selects option from menu
+2. Python sends request to PostgreSQL
+3. Function or procedure executes
+4. Result is returned and printed
+
+---
+
+## 🚀 How to Run
+
+1. Make sure PostgreSQL is running
+2. Create database (e.g. `myfirstdb`)
+3. Run SQL files:
+
+   * `functions.sql`
+   * `procedures.sql`
+4. Run Python program:
+
+```bash
+py phonebook.py
+```
+
+---
+
+## 📁 Project Structure
+
+```
+Practice_8/
+│
+├── phonebook.py
+├── connect.py
+├── config.py
+├── functions.sql
+└── procedures.sql
+```
+
+---
+
+## 💡 Notes
+
+* Functions return data using `SELECT`
+* Procedures perform actions using `CALL`
+* Phone numbers are stored as text (VARCHAR)
+* ID is auto-generated using SERIAL
+
+---
+
+## 🎯 Conclusion
+
+This project demonstrates how to combine Python and PostgreSQL.
+It shows how to use functions, procedures, loops, and conditions in a real application.
+
+---

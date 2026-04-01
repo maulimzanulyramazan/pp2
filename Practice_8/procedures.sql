@@ -1,4 +1,3 @@
--- 2. Procedure: insert new user, if exists then update phone
 CREATE OR REPLACE PROCEDURE insert_or_update_user(p_name VARCHAR, p_phone BIGINT)
 AS $$
 BEGIN
@@ -14,7 +13,6 @@ END;
 $$ LANGUAGE plpgsql;
 
 
--- 3. Procedure: insert many users, validate phone, show incorrect data
 CREATE OR REPLACE PROCEDURE insert_many_users(
     IN p_names TEXT[],
     IN p_phones TEXT[]
@@ -34,8 +32,6 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
-
--- 5. Procedure: delete by username or phone
 CREATE OR REPLACE PROCEDURE delete_contact(p_value TEXT)
 AS $$
 BEGIN

@@ -1,4 +1,3 @@
--- 1. Function: search by pattern
 CREATE OR REPLACE FUNCTION search_contacts(pattern_text TEXT)
 RETURNS TABLE (
     id INT,
@@ -17,7 +16,6 @@ END;
 $$ LANGUAGE plpgsql;
 
 
--- 4. Function: pagination with LIMIT and OFFSET
 CREATE OR REPLACE FUNCTION get_contacts_paginated(p_limit INT, p_offset INT)
 RETURNS TABLE (
     id INT,

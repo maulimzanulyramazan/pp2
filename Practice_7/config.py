@@ -1,5 +1,5 @@
-host = 'localhost',
-database = 'myfirstdb',
-user = 'postgres',
-password = '550697',
+host = 'localhost'
+database = 'myfirstdb'
+user = 'postgres'
+password = '550697'
 port = '2008'

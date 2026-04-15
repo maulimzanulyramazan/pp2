@@ -1,142 +1,62 @@
-# 📱 PhoneBook Application (PostgreSQL + Python)
+# Mickey Clock (Pygame)
 
-## 📌 Description
+## Description
 
-This project is a simple PhoneBook application using **Python** and **PostgreSQL**.
-It allows the user to store and manage contacts in a database.
+This project is a simple analog clock created using Pygame.
+It displays the current system time using moving clock hands (minute and second), along with a clock face that includes numbers and tick marks.
 
-The program uses:
+## Features
 
-* Python → user interface
-* PostgreSQL → data storage and logic
-* Functions and Procedures → advanced database operations
+* Analog clock with circular design
+* Minute and second hands
+* Numbers (1–12) around the clock
+* Minute and hour tick marks
+* Updates every second in real time
 
----
-
-## ⚙️ Features
-
-The application supports:
-
-1. Create contacts table
-2. Search contacts by name or phone (pattern search)
-3. Insert or update one user
-4. Insert multiple users (with validation)
-5. Show contacts with pagination (LIMIT & OFFSET)
-6. Delete contact by name or phone
-7. Show all contacts
-
----
-
-## 🗄️ Database Structure
-
-Table: `contacts`
-
-* `id` – unique identifier (SERIAL PRIMARY KEY)
-* `name` – contact name (VARCHAR)
-* `phone` – phone number (VARCHAR)
-
----
-
-## 🧠 Functions
-
-### 1. search_contacts(pattern_text)
-
-Searches contacts using part of name or phone.
-
-Uses:
-
-* `ILIKE` for case-insensitive search
-* `%pattern%` for partial matching
-
----
-
-### 2. get_contacts_paginated(limit, offset)
-
-Returns contacts in parts using:
-
-* `LIMIT` → number of rows
-* `OFFSET` → starting position
-
----
-
-## ⚡ Procedures
-
-### 1. insert_or_update_user(name, phone)
-
-* Inserts new contact
-* Updates phone if contact already exists
-
----
-
-### 2. insert_many_users(names[], phones[])
-
-* Inserts multiple users
-* Uses loop and validation
-* Skips incorrect phone numbers
-
----
-
-### 3. delete_contact(value)
-
-Deletes contact by:
-
-* name
-  or
-* phone
-
----
-
-## 🔄 How It Works
-
-1. User selects option from menu
-2. Python sends request to PostgreSQL
-3. Function or procedure executes
-4. Result is returned and printed
-
----
-
-## 🚀 How to Run
-
-1. Make sure PostgreSQL is running
-2. Create database (e.g. `myfirstdb`)
-3. Run SQL files:
-
-   * `functions.sql`
-   * `procedures.sql`
-4. Run Python program:
-
-```bash
-py phonebook.py
-```
-
----
-
-## 📁 Project Structure
+## Project Structure
 
 ```
-Practice_8/
-│
-├── phonebook.py
-├── connect.py
-├── config.py
-├── functions.sql
-└── procedures.sql
+mickeys_clock/
+├── main.py          # Runs the application
+├── clock.py         # Contains clock logic and drawing
+├── images/          # (Optional) images for clock hands
+│   └── mickey_hand.png
+└── requirements.txt
 ```
 
----
+## Requirements
 
-## 💡 Notes
+* Python 3.10+
+* Pygame
 
-* Functions return data using `SELECT`
-* Procedures perform actions using `CALL`
-* Phone numbers are stored as text (VARCHAR)
-* ID is auto-generated using SERIAL
+Install dependencies:
 
----
+```
+pip install -r requirements.txt
+```
 
-## 🎯 Conclusion
+## How to Run
 
-This project demonstrates how to combine Python and PostgreSQL.
-It shows how to use functions, procedures, loops, and conditions in a real application.
+```
+python main.py
+```
 
----
+## How It Works
+
+* The program gets the current time using Python's datetime module
+* Time is converted into angles (degrees)
+* Trigonometry (sin, cos) is used to calculate hand positions
+* Pygame draws the clock, numbers, and hands on the screen
+
+## Notes
+
+* The clock updates every second
+* The center of the clock is fixed
+* All drawing is done dynamically using Pygame
+
+## Optional Improvements
+
+* Add hour hand
+* Use custom images (e.g., Mickey hands)
+* Add background or clock design
+* Smooth animation (real-time movement)

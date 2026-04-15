@@ -24,11 +24,11 @@ def insert_csv():
     conn = connect()
     cur = conn.cursor()
 
-    with open("contacts.csv", "r", encoding="utf-8") as f:
+    with open("contacts1.csv", "r", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
             cur.execute(
-                "INSERT INTO contacts (name, phone) VALUES (%s, %s) ON CONFLICT DO NOTHING",
+                "INSERT INTO contacts (name, phone) VALUES (%s, %s) ON CONFLICT (name) DO NOTHING",
                 (row["name"], int(row["phone"]))
             )
 
@@ -78,7 +78,10 @@ def query():
     conn = connect()
     cur = conn.cursor()
 
-    cur.execute("SELECT * FROM contacts")
+    cur.execute("""
+        SELECT ROW_NUMBER() OVER (ORDER BY id), name, phone
+        FROM contacts
+    """)
 
     for row in cur.fetchall():
         print(row)

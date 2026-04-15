@@ -13,15 +13,3 @@ print("Even numbers:", evens)
 # reduce
 total = reduce(lambda a, b: a + b, numbers)
 print("Sum:", total)
-
-# type checking and conversions
-x = "123"
-print("Type of x:", type(x))
-
-y = int(x)
-print("Converted y:", y)
-print("Type of y:", type(y))
-
-z = 45.67
-print("Integer conversion:", int(z))
-print("String conversion:", str(z))

@@ -1,5 +1,0 @@
-n = int(input())
-a = list(map(int, input().split()))
-maxval = max(a)
-pos = a.index(maxval)
-print(pos + 1)

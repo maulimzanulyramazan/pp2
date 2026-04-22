@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Pygame cache
+*.pyc
+
+# Practice 9 (егер керек емес болса)
+Practice_9/
+
+# Басқа керек емес папкалар
+imports/
+jsonn/
+lab4_copy/
+re_expression/
+sqlexample/
+game/
+game1.py
+game2.py
+exam.py
+example.py
+quiz.py
+snake.py
+
+# Images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.wav

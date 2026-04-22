@@ -5,7 +5,7 @@ import math
 pygame.init()
 screen = pygame.display.set_mode((800, 600))
 clock = pygame.time.Clock()  # Control game speed
-screen.fill((255, 255, 255))
+screen.fill((255, 255, 254))
 
 radius = 5  # Brush size
 color = (0, 0, 0)  # Current color (black)

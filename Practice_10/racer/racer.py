@@ -9,7 +9,7 @@ WIDTH = 800
 HEIGHT = 600
 
 # Colors
-BLACK = (0, 0, 0)
+BLACK = (0, 0, 1)
 WHITE = (255, 255, 255)
 GRAY = (50, 50, 50)
 LIGHT_GRAY = (80, 80, 80)

@@ -1,0 +1,12 @@
+[
+  {
+    "id": 14,
+    "name": "Ali",
+    "email": "ali@gmail.com",
+    "birthday": "2006-11-25",
+    "group": "Friend",
+    "phones": [
+      {"phone": "87014561231", "type": "mobile"}
+    ]
+  }
+]

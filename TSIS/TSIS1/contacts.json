@@ -1,0 +1,58 @@
+[
+  {
+    "id": 14,
+    "name": "Ramazan",
+    "email": "ramazan@gmail.com",
+    "birthday": "2008-07-08",
+    "group": "Family",
+    "phones": [
+      {
+        "phone": "87076079108",
+        "type": "mobile"
+      },
+      {
+        "phone": "87474897545",
+        "type": "work"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Miras",
+    "email": "miras@gmail.com",
+    "birthday": "2007-08-09",
+    "group": "Friend",
+    "phones": [
+      {
+        "phone": "87774811232",
+        "type": "mobile"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Nuray",
+    "email": "nuray@gmail.com",
+    "birthday": "2007-03-20",
+    "group": "Friend",
+    "phones": [
+      {
+        "phone": "87771234601",
+        "type": "mobile"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Ali",
+    "email": "ali@gmail.com",
+    "birthday": "2006-11-25",
+    "group": "Friend",
+    "phones": [
+      {
+        "phone": "87014561231",
+        "type": "mobile"
+      }
+    ]
+  }
+]
